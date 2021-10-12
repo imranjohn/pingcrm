@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Classes\UseDynamicConnection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -10,6 +11,7 @@ class Contact extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    use UseDynamicConnection;
 
     public function resolveRouteBinding($value, $field = null)
     {
